@@ -39,20 +39,20 @@ Authorization: User <username>
 | Username | Role   |
 | -------- | ------ |
 | admin    | Admin  |
-| ed       | Editor |
-| vi       | Viewer |
+| editor   | Editor |
+| viewer   | Viewer |
 
 
 Sample curl Tests
 1. Viewer cannot POST (403)
 curl -X POST http://localhost:3000/articles \
-  -H "Authorization: User vi" \
+  -H "Authorization: User viewer" \
   -H "Content-Type: application/json" \
   -d '{"title":"Test","body":"Viewer fail"}'
 
 2. Editor can POST (201)
 curl -X POST http://localhost:3000/articles \
-  -H "Authorization: User ed" \
+  -H "Authorization: User editor" \
   -H "Content-Type: application/json" \
   -d '{"title":"Editor Post","body":"Editors can post"}'
 
