@@ -11,8 +11,8 @@ export interface User {
 export class UsersService {
   private users: User[] = [
     { username: 'admin', role: 'ADMIN' },
-    { username: 'ed', role: 'EDITOR' },
-    { username: 'vi', role: 'VIEWER' },
+    { username: 'editor', role: 'EDITOR' },
+    { username: 'viewer', role: 'VIEWER' },
   ];
 
   findByUsername(username: string): User | undefined {

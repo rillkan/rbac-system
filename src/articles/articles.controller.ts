@@ -53,8 +53,8 @@ export class ArticlesController {
 
   private getUserRole(username: string): string {
     const users = {
-      ed: 'editor',
-      vi: 'viewer',
+      editor: 'editor',
+      viewer: 'viewer',
       admin: 'admin',
     };
     return users[username] || 'viewer';
